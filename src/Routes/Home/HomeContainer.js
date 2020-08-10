@@ -42,7 +42,7 @@ export default class extends React.Component{
 
     render() {
         const {nowPlaying, upcoming, popular, error, loading} = this.state;//객체의 비구조 할당
-        console.log(this.state)//잘 작동하는 지 확인
+        // console.log(this.state)//잘 작동하는 지 확인
         return(<HomePresenter 
             nowPlaying = {nowPlaying} 
             upcoming={upcoming} 

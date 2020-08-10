@@ -3,7 +3,9 @@ import{ Link, withRouter} from "react-router-dom";
 //withRouter은 다른 컴포넌트를 감싸는 컴포넌트 그리고 router에게 어떠한 정보를 제공
 // router에서 주어진 Link를 사용 & link는 해당 페이지가 내 어플리케이션에 있으면 javascript 방식으로 가게해줌 
 import styled from "styled-components";
-
+//"with Router"컴포넌트를 가지고 꾸며주었기 때문에 header Component 는 우리의 라우터의 위치를 알고 있다.
+//디폴트 리액트 Router가 모든 정보를 Route들에게 줄것 이기에 로케이션 정보를 헤더에게 주지 않아도 된다
+//디폴트 라우터는 모든 route들에게 props를 줄것이다
 const Header = styled.header`
 position: fixed;
 top:0;
