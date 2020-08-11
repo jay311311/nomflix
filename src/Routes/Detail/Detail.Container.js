@@ -27,7 +27,7 @@ async componentDidMount(){
     try{
         if(isMovie){
             ({data:result}= await moviesApi.movieDetail(parsedId));//()은searchContainer 의 "const="와 같은 것"
-            
+            //data안에 result가 있는게 아니라 data가 result 이다
         }else{
             ({data:result}= await TVapi.showDetail(parsedId));
             
