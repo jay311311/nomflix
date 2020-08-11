@@ -26,11 +26,11 @@ async componentDidMount(){
     let result=null;
     try{
         if(isMovie){
-            const request= await moviesApi.movieDetail(parsedId);
-            result=request.data;
+            ({data:result}= await moviesApi.movieDetail(parsedId));//()은searchContainer 의 "const="와 같은 것"
+            
         }else{
-            const request= await TVapi.showDetail(parsedId);
-            result=request.data;
+            ({data:result}= await TVapi.showDetail(parsedId));
+            
         }
         console.log(result)
     } catch{
@@ -44,8 +44,9 @@ async componentDidMount(){
     render() {
         //console.log(this.props)//"디폴트 라우터는 모든 route들에게 props를 줄것이다"를 증명한다
         //단, http://localhost:3000/movie/1로 들어가야 console을 볼수 있음.
-        console.log(this.state)        
+            
         const {result, error, loading} = this.state;//객체의 비구조 할당
+        console.log(result)   
         return(<DetailPresenter 
            result={result}
             error = {error}
