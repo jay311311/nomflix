@@ -10,6 +10,6 @@ const Container  = styled.div`
  font-size: 32px;
 `;
 
-const Loader = () => <Container><span role="img" aria-labl="Loading">⏰</span></Container>;
+const Loader = () => <Container><span role="img" aria-label="Loading">⏰</span></Container>;
 
 export default Loader;
