@@ -16,20 +16,48 @@ const HomePresenter  = ({nowPlaying, upcoming, popular, error, loading}) => load
         {nowPlaying && nowPlaying.length > 0  && (
         <Section title="Now Playing">
             {nowPlaying.map(movie => (
-                <Poster/>
+                <Poster 
+                    key={movie.id} 
+                    id={movie.id}       
+                    title={movie.original_title} 
+                    imageUrl={movie.poster_path}
+                    rating={movie.vote_average}
+                    year={/* movie.release_date && */ movie.release_date.substring(0,4)}
+                    //substring은 release_data가 존재할때만 사용하도록 한다는 의미로 && 삽입
+                    isMovie={true}
+                />
+                //모든 element엔 id 가 필요함
                 ))}
         </Section>)}
         {/*nowPlaying존재하는 지 확인 && nowPlaying길이가 0보다 큰지 확인 && section이 render되는지 확인*/ }
         {upcoming && upcoming.length > 0  && (
         <Section title="upcoming Movies">
             {upcoming.map(movie => (
-                <Poster/>
+                 <Poster 
+                 key={movie.id} 
+                 id={movie.id}       
+                 title={movie.original_title} 
+                 imageUrl={movie.poster_path}
+                 rating={movie.vote_average}
+                 year={/* movie.release_date && */ movie.release_date.substring(0,4)}
+                 //substring은 release_data가 존재할때만 사용하도록 한다는 의미로 && 삽입
+                 isMovie={true}
+             />
             ))}
         </Section>)}
         {popular && popular.length > 0  && (
         <Section title="Popular Movies">
             {popular.map(movie => (
-                <Poster/>
+                 <Poster 
+                 key={movie.id} 
+                 id={movie.id}       
+                 title={movie.original_title} 
+                 imageUrl={movie.poster_path}
+                 rating={movie.vote_average}
+                 year={/* movie.release_date && */ movie.release_date.substring(0,4)}
+                 //substring은 release_data가 존재할때만 사용하도록 한다는 의미로 && 삽입
+                 isMovie={true}
+             />
             ))}
         </Section>)}
         {/*section안에 children을 넣는 이유는 section에서 div 내부에 원하는 children을 넣을수 있어야 해서 */}
