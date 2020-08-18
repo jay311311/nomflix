@@ -1,5 +1,5 @@
 import React from "react";
-import DetailPresenter from "./DetailPresenter"
+import DetailPresenter from "./DetailPresenter";
 import { moviesApi, TVapi } from "../../api";
 
 export default class extends React.Component{
@@ -18,6 +18,7 @@ export default class extends React.Component{
 async componentDidMount(){
     const {match:{params:{id}},
         history:{push}} = this.props;
+        console.log(id,push)
     const {isMovie} = this.state;
     const parsedId = parseInt(id);// string인것을 number로 바꾸는 과정
     if (isNaN(parsedId)){
@@ -32,7 +33,7 @@ async componentDidMount(){
             ({data:result}= await TVapi.showDetail(parsedId));
             
         }
-        console.log(result)
+       
     } catch{
         this.setState({error:"i can't find it"})
     }finally{
@@ -46,12 +47,12 @@ async componentDidMount(){
         //단, http://localhost:3000/movie/1로 들어가야 console을 볼수 있음.
             
         const {result, error, loading} = this.state;//객체의 비구조 할당
-        console.log(result)   
-        return(<DetailPresenter 
+        
+        return<DetailPresenter 
            result={result}
             error = {error}
             loading = {loading}
-        />)
+        />
     }
 }
  

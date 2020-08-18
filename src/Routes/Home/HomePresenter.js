@@ -6,7 +6,8 @@ import Loader from "../../Components/Loader";
 import Message from "../../Components/Message";
 import Poster from "../../Components/Poster";
 const Contanier = styled.div`
-padding : 0px 20px;
+padding :  20px;
+
 `;
 
 
