@@ -5,6 +5,8 @@ import Section from "Components/Section";
 import Loader from "../../Components/Loader";
 import Message from "../../Components/Message";
 import Poster from "../../Components/Poster";
+import Helmet from "react-helmet"
+
 const Contanier = styled.div`
 padding :  20px;
 
@@ -13,6 +15,9 @@ padding :  20px;
 
 const HomePresenter  = ({nowPlaying, upcoming, popular, error, loading}) => loading ? (<Loader></Loader>) : (
     <Contanier> 
+        <Helmet>
+            <title>Movie in Nomflix</title>
+        </Helmet>
         {/*{nowPlaying.map()}이 에러가 나오는 이유는 loading 할때 nowPlaying은 존재하지 않아서*/ }
         {nowPlaying && nowPlaying.length > 0  && (
         <Section title="Now Playing">

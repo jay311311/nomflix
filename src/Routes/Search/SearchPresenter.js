@@ -1,5 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
 import styled from "styled-components";
 import Loader from "../../Components/Loader"
 import Section from "../../Components/Section"
@@ -23,6 +24,9 @@ const Input = styled.input`
 
 const SearchPresenter  = ({movieResults, tvResult, searchTerm, error, loading, handleSubmit, updateTerm}) => 
     <Container>
+        <Helmet>
+            <title>search in Nomflix</title>
+        </Helmet>
         <Form onSubmit={handleSubmit}>
             <Input placeholder="Search Movies or TV Show" value={searchTerm} onChange={updateTerm}>
                 {/*input을 제어 하기위해 value추가*/}
