@@ -47,7 +47,8 @@ opacity:.5;
 
 const Data = styled.div`
 width:100%;
-margin-left:10px`;
+margin-left:10px;
+`;
 
 const Title = styled.h3`
  font-size:32px;
@@ -67,7 +68,7 @@ font-size:12px;
 
 opacity:0.7;
 line-height:1.5;
-width:100%
+width:100%;
 `
 
 const DetailPresenter  = ({result, error, loading}) => 

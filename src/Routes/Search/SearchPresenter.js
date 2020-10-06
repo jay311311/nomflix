@@ -61,7 +61,6 @@ const SearchPresenter  = ({movieResults, tvResult, searchTerm, error, loading, h
                             rating={show.vote_average}
                             year={/* movie.release_date && */ show.first_air_date.substring(0,4)}
                             //substring은 release_data가 존재할때만 사용하도록 한다는 의미로 && 삽입
-                          
                         />
                     ))}
                 </Section>
@@ -69,8 +68,9 @@ const SearchPresenter  = ({movieResults, tvResult, searchTerm, error, loading, h
         </> 
         )}
           {error && <Message color="#e74c3c" text={error}/>}
-          {tvResult && movieResults && tvResult.length === 0 &&  movieResults.length === 0 && 
+          {tvResult && tvResult.length === 0 &&
           (<Message  text = {"nothing Found"} color="#95a5a6" />) }
+          
     </Container>
 
 SearchPresenter.propTypes ={

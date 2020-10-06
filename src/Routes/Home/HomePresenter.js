@@ -9,7 +9,6 @@ import Helmet from "react-helmet"
 
 const Contanier = styled.div`
 padding :  20px;
-
 `;
 
 
@@ -37,7 +36,7 @@ const HomePresenter  = ({nowPlaying, upcoming, popular, error, loading}) => load
         </Section>)}
         {/*nowPlaying존재하는 지 확인 && nowPlaying길이가 0보다 큰지 확인 && section이 render되는지 확인*/ }
         {upcoming && upcoming.length > 0  && (
-        <Section title="upcoming Movies">
+        <Section title="Upcoming Movies">
             {upcoming.map(movie => (
                  <Poster 
                  key={movie.id} 

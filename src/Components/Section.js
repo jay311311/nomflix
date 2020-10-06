@@ -8,13 +8,13 @@ margin-bottom: 50px};
 `;
 
 const Title = styled.span`
-    font-size:16px;
-    font-weight:600;
-    
-`;
+    font-size:1.2rem;
+    font-weight:600;   
+
+`
 
 const Grid = styled.div`
-margin-bottom: 25px;
+margin: 25px 0;
 display:grid;
 grid-template-columns : repeat(auto-fill, 125px);
 grid-gap: 25px;

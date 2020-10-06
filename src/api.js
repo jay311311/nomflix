@@ -9,7 +9,7 @@ const api = axios.create({
 });
 //AXIOS는 인스턴스를 위한 설정이 가능하다
 
-api.get("tv/popular");
+api.get("tv/popular");//테스트용
 //여기서 /tv/popular을 하게되면 baseURL를 덮어쓰기 하게됨, / 은 절대 경로를 의미.
 
 export  const moviesApi = {
