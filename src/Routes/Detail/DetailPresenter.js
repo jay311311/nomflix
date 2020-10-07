@@ -23,7 +23,7 @@ z-index:1;
 `;
 
 const Cover = styled.div`
-width:80%;
+width:60%;
 height:100%;
 background-image: url(${props => props.bgImage});
 background-position : center center;
